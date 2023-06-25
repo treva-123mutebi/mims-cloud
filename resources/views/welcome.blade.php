@@ -16,6 +16,8 @@
         </style>
     </head>
     <body class="antialiased">
+        <!-- first way is to add the  _token input to each of your submissions. -->
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <form action="/tasks/5" method="POST">
            <input type="hidden" name="_method" value="DELETE">
         </form>

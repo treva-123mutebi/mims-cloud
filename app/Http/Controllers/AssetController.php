@@ -8,7 +8,7 @@ class AssetController extends Controller
 {
     //
     public function hello(){
-        return 'Hello World';
+        return view('welcome');
 
     }
     /*public function store(){
