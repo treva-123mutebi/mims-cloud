@@ -38,3 +38,20 @@ Route::get('events/{event}', function (Conference $event)
 
 Route::get('/', [AssetController::class, 'hello']);
 Route::post('assets', [AssetController::class, 'store'] );
+
+/**
+ * Performing redirect.
+ * 1. using the global helper to generate a redirect response.
+ * Route::get('redirect-with-helper', function () { return redirect()->to('login');
+*   });
+* 2. Using the global helper shortcut
+* Route::get('redirect-with-helper-shortcut', function () { return redirect('login');
+* });
+* 3. Using the facade to generate a redirect response
+*  Route::get('redirect-with-facade', function () { return Redirect::to('login');
+*  });
+* 4. Redirect to route.
+* Route::get('redirect', function () {return redirect()->route('conferences.index');});
+* 5. Redirect to route with parameters.
+*  Route::get('redirect', function () { return redirect()->route('conferences.show', ['conference' => 99]);});
+*/
